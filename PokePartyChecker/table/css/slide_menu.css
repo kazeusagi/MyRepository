@@ -1,0 +1,81 @@
+.arrow{
+    position: fixed;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    right: 20px;
+    top: 20px;
+    border-left: solid 5px aliceblue;
+    border-bottom: solid 5px aliceblue;
+    transform: rotate(45deg);
+    animation-name: arrow_reverse;
+    animation-duration: 0.5s;
+}
+
+.arrow.open{
+    transform: rotate(225deg);
+    animation-name: arrow;
+    animation-duration: 0.5s;
+}
+
+nav{
+    padding-top: 100px;
+    position: fixed;
+    height: 100%;
+    width: 300px;
+    z-index: 9;
+    right: 0px;
+    transform: translate(200px);
+    background-color: rgba(40, 150, 250, 0.4);
+    transition: all 0.5s;
+}
+
+nav li{
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav.open{
+    transform: translateZ(0px);
+}
+
+li{
+    list-style: none;
+}
+
+@keyframes arrow{
+    0%{
+        opacity: 1;
+        transform: rotate(45deg);
+    }
+    49%{
+        opacity: 0;
+        transform: rotate(45deg);
+    }
+    50%{
+        transform: rotate(225deg);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(225deg)
+    }
+}
+@keyframes arrow_reverse{
+    0%{
+        opacity: 1;
+        transform: rotate(225deg);
+    }
+    49%{
+        opacity: 0;
+        transform: rotate(225deg);
+    }
+    50%{
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: rotate(45deg)
+    }
+}

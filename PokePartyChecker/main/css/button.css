@@ -1,0 +1,23 @@
+#judge{
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    margin-left: 350px;
+    text-decoration: none;
+    color: aliceblue;
+    border: solid 1px #5af4ad;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 7px;
+    padding-left: 7px;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+}
+
+#judge:hover{
+    background-color: #5af4ad;
+    color: black;
+    font-weight: bolder;
+}

@@ -1,0 +1,74 @@
+/*-----FlexBox-----*/
+
+.container{
+    display: flex;
+}
+
+.pokemon{
+    border: solid 1px gray;
+    line-height: 0;
+    cursor: pointer;
+}
+
+/*-----Top-----*/
+
+#title{
+    display: inline-block;
+    height: 9%;
+}
+
+/*-----Left(PokemonList)-----*/
+
+#main{
+    flex-basis: 70%;
+}
+
+#my_pokemon{
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: darkblue;
+    overflow: auto;
+    height: 82px;
+}
+
+#enemy_pokemon{
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: darkred;
+    overflow: auto;
+    height: 82px;
+}
+
+/*-----Box-----*/
+
+#pokemon_box{
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: darkgreen;
+    height: 410px;
+    overflow: auto;
+}
+
+#pokemon_box .pokemon{
+    position: relative;
+}
+
+#pokemon_box .me::before{
+    content: "1";
+    position: absolute;
+    top: 68px;
+    color: #7cffff;
+}
+
+#pokemon_box{
+    font-size: 30px;
+}
+
+#pokemon_box .enemy::after{
+    content: "2";
+    position: absolute;
+    left: 60px;
+    top: 68px;
+    color: #ff8080;
+}
+

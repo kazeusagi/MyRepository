@@ -1,0 +1,65 @@
+#menu{
+    background-color: #1a1a1a;
+    border: solid 1px gray;
+    flex-basis: 30%;
+    overflow: auto;
+    height: 784px;
+}
+
+#toggle_button {
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#toggle_button label{
+    border: solid 1px #444;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+#toggle_button label:hover{
+    color: #5af4ad;
+    transition: color 0.25s linear;
+}
+
+#toggle_button input[type="radio"]:checked+label{
+    border: solid 1px #5af4ad;
+    color: #5af4ad;
+    transition: color, border 1s linear;
+    animation-name: glow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+#toggle_button input[type="radio"] {
+    display: none;
+}
+
+#status_table{
+    border-spacing: 0;
+    width: 100%;
+}
+
+td{
+    border: 1px solid #7b7b7b;
+}
+
+td:first-child{
+    width: 30%;
+}
+
+#sns a{
+    text-decoration: none;
+    color: aliceblue;
+    transition: color 0.2s linear;
+}
+
+#sns a:hover{
+    color: #5af4ad;
+}
+
+#sns a img{
+    position: relative;
+    top: 10px;
+}

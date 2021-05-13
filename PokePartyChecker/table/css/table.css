@@ -1,0 +1,33 @@
+table{
+    margin-top: 1px;
+    margin-left: 1px;
+    border-spacing: 0;
+    border: 1px solid #7b7b7b;
+}
+
+#logo{
+    background-image: url("../../image/logo/cell.png");
+}
+
+tr:nth-child(odd){
+    background-color: rgba(100, 100, 100, 0.7);
+}
+
+tr:nth-child(even){
+    background-color: rgba(150, 150, 150, 0.6);
+}
+
+td{
+    border: 1px solid #7b7b7b;
+    border-width: 0px 1px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+th{
+    border: 1px solid #7b7b7b;
+    border-width: 0px 1px;
+    width: 82px;
+    height: 82px;
+}

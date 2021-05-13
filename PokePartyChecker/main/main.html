@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>Poke Party Checker</title>
+    <link rel="stylesheet" href="css/import_main.css">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="js/import_main.js"></script>
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <div class="container">
+            <div id="main">
+                <div id="top">
+                    <h1 id="title">Poke Party Checker
+                    </h1>
+                        <select class="option">
+                            <option value="" hidden>選択してください</option>
+                            <option value="1">タイプ相性</option>
+                            <option value="2">総合相性（未実装）</option>
+                        </select>
+                    <a href="#" id="judge" onclick="post()">判定</a>
+                    <form name="post_data" action="../table/table.php" method="post">
+                        <input type="hidden" name="option" value="">
+                        <input type="hidden" name="me" value="">
+                        <input type="hidden" name="enemy" value="">
+                    </form>
+                </div>
+                <ul id="check_list">
+                    <li class="container">
+                        <div class="check"></div>
+                        <input type="radio" name="add" value="my_pokemon" class="add" id="add_me" checked>
+                        <label for="add_me">自分のパーティーに追加</label>
+                    </li>
+                    <div id="my_pokemon" class="container">
+                        <p id="description_me">上のボタンを押し自分のパーティーに追加するポケモンを下のボックスから選択してください</p>
+                    </div>
+                    <li class="container">
+                        <input type="radio" name="add" value="enemy_pokemon" class="add" id="add_enemy">
+                        <label for="add_enemy">相手のパーティーに追加</label>
+                    </li>
+                    <div id="enemy_pokemon" class="container">
+                        <p id="description_enemy">上のボタンを押し相手のパーティーに追加するポケモンを下のボックスから選択してください</p>
+                    </div>
+                </ul>
+                <label id="box_label">Pokemon box</label>
+                <div id="pokemon_box" class="container"></div>
+            </div>
+            <div id="menu">
+                <div id="toggle_button" class="container">
+                    <input type="radio" name="menu" id="status_button" value="status" checked>
+                    <label for="status_button">Status</label>
+                    <input type="radio" name="menu" id="filter_button" value="filter">
+                    <label for="filter_button">Filter</label>
+                    <input type="radio" name="menu" id="info_button" value="info">
+                    <label for="info_button">Info</label>
+                    <input type="radio" name="menu" id="contact_button" value="contact">
+                    <label for="contact_button">Contact</label>
+                </div>
+                <div id="status" class="hidden">
+                    <table id="status_table">
+                        <tr>
+                            <td>図鑑ID</td>
+                            <td id="id"></td>
+                        </tr>
+                        <tr>
+                            <td>英語名</td>
+                            <td id="english_name"></td>
+                        </tr>
+                        <tr>
+                            <td>日本名</td>
+                            <td id="japanese_name"></td>
+                        </tr>
+                        <tr>
+                            <td>タイプ1</td>
+                            <td id="type1"></td>
+                        </tr>
+                        <tr>
+                            <td>タイプ2</td>
+                            <td id="type2"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="filter" class="hidden">
+                    <input type="text" value="filter">
+                    未実装です...
+                </div>
+                <div id="check" class="hidden">
+                    <button>Check</button>
+                </div>
+                <div id="info" class="hidden">
+                    <p>更新情報ページ<br>
+                    随時追加予定</p>
+                </div>
+                <div id="contact" class="hidden">
+                    <p>この制作物は授業の課題の一環として制作しました。<br>
+                    ご意見、ご要望等ありましたらこちらまでお願いします。<br>
+                    </p>
+                    <div id="sns">
+                        <a href="https://twitter.com/toshishi_bass"><img src="../image/logo/twitter.png", width="40px">@toshishi_bass</a><br/>
+                        <a href="https://www.instagram.com/bass_itoshi/"><img src="../image/logo/instagram.png", width="40px">@bass_itoshi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
