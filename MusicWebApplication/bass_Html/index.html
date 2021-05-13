@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/script.js"></script>
+	<meta charset="UTF-8">
+	<title>ベース</title>
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="../metro_Html/index.html">メトロノーム</a>
+				<a href="../drum_Html/index.html">ドラム</a>
+				<a href="../bass_Html/index.html">ベース</a>
+			</li>
+		</ul>
+	</nav>
+	<p>使い方：各テキストボックスに対応する値を入れていく。<br>
+	上から1弦、2弦、3弦、4弦<br>
+	[値表]<br>
+	- :なし(初期値)<br>
+	~ :伸ばす<br>
+	0~21の各数値 :そこに対応する音<br>
+	</p>
+	<form id="bpb_init">
+		<label><input type="radio" name="onsu" value="8" checked>8分音符</label>
+		<label><input type="radio" name="onsu" value="16">16分音符</label>
+		<input id="start" type="button" value="開始">
+	</form>
+	<div id="mathbox">
+		<p>1ページ目</p>
+		<table id="math" cellspacing="0">
+			<tr id="pick">
+			</tr>
+			<tr id="G">
+			</tr>
+			<tr id="D">
+			</tr>
+			<tr id="A">
+			</tr>
+			<tr id="E">
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

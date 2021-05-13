@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="js/script.js"></script>
+<meta charset="UTF-8">
+<title>メトロノーム</title>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="../metro_Html/index.html">メトロノーム</a>
+				<a href="../drum_Html/index.html">ドラム</a>
+				<a href="../bass_Html/index.html">ベース</a>
+			</li>
+		</ul>
+	</nav>
+	<audio id="sound_s" src="se/metro_s.wav" preload="auto"></audio>
+	<audio id="sound_w" src="se/metro_w.wav" preload="auto"></audio>
+	<div id="bpmbox" class="box1">
+	<nav id="bpmsetting">
+		<ul>
+			<li class="minus">
+				<input id="-10" type="button" value="-10" class="btn">
+				<input id="-1" type="button" value="-1" class="btn">
+			</li>
+			<li class="plus">
+				<input id="+1" type="button" value="+1" class="btn">
+				<input id="+10" type="button" value="+10" class="btn">
+			</li>
+		</ul>
+	</nav>
+		<p>BPM:</p>
+		<p class="bpm">100</p>
+	</div>
+	<div id="bpbbox" class="box1">
+		<p>Beats Per Bar:</p>
+		<div id="haku">
+			<span>4</span>拍
+		</div>
+		<div id="bpbbutton">
+			<input id="-10" type="button" value="+1" class="btn">
+			<input id="-1" type="button" value="-1" class="btn">
+		</div>
+	</div>
+	<form id="timer" class="box1">
+		<input type="number" value="0" id="min" class="box" min="0">分
+		<input type="number" value="0" id="sec" class="box" min="0">秒
+	</form>
+	<div id="bpmimage" class="box1">
+		<div class="strong"></div><div></div><div></div><div></div>
+	</div>
+	<input id="bpmstart" type="button" value="再生" class="btn">
+</body>
+</html>
